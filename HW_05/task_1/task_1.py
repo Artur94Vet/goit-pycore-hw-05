@@ -1,28 +1,23 @@
 '''def caching_fibonacci():
-    """
-    Функція caching_fibonacci створює внутрішню функцію fibonacci(n),
-    яка обчислює n-те число Фібоначчі з використанням кешування результатів.
-    """
-    cache = {}  # Словник для збереження обчислених значень
+
+    cache = {}  
 
     def fibonacci(n):
         if n <= 0:
             return 0
         if n == 1:
             return 1
-        if n in cache:  # Якщо результат для n вже обчислено, повертаємо його з кешу
+        if n in cache:  
             return cache[n]
-        # Обчислюємо значення рекурсивно, зберігаємо в кеш та повертаємо результат
         cache[n] = fibonacci(n - 1) + fibonacci(n - 2)
         return cache[n]
 
     return fibonacci
 
-# Приклад використання
 if __name__ == '__main__':
     fib = caching_fibonacci()
-    print(fib(10))  # Виведе 55
-    print(fib(15))  # Виведе 610
+    print(fib(10))  
+    print(fib(15))  
 '''
 #  p.s. використовую всі можливі ресурси
 from colorama import init, Fore, Style
@@ -54,7 +49,7 @@ def main():
     
     while True:
         user_choice = input(
-            Fore.CYAN + "Привіт, ти хочеш вивести результат домашнього завдання? " +
+            Fore.CYAN + "\nПривіт, ти хочеш вивести результат домашнього завдання? " +
             "Введи 'Y' для демонстрації (результат дз), або 'число' для введення власного числа.\n" +
             "Або введи число безпосередньо.\n" +
             "Для виходу введи 'exit': " + Style.RESET_ALL
@@ -70,7 +65,7 @@ def main():
             result_2 = fib(15)
             print(Fore.GREEN + f"Результат домашнього завдання (fib(10)): {result}" + Style.RESET_ALL)
             print(Fore.GREEN + f"Результат домашнього завдання (fib(15)): {result_2}" + Style.RESET_ALL)
-            print(Fore.MAGENTA + "Допобачення!" + Style.RESET_ALL)
+            print(Fore.MAGENTA + "\nДопобачення!" + Style.RESET_ALL)
             break
 
         # Якщо користувач вибрав варіант "число", спочатку запросимо число
